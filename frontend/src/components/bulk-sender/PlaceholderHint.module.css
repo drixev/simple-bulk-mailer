@@ -1,0 +1,32 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 10px 14px;
+  background: #f9f6ff;
+  border: 1px solid #e8e0ff;
+  border-radius: 6px;
+}
+
+.label {
+  font-size: 12px;
+  color: #666;
+  flex-shrink: 0;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pill {
+  font-size: 12px;
+  background: #ede9ff;
+  color: #5b3fb5;
+  padding: 2px 8px;
+  border-radius: 99px;
+  font-family: monospace;
+  cursor: default;
+}

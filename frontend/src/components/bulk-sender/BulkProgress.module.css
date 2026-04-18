@@ -1,0 +1,79 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stats {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.stat {
+  font-size: 13px;
+  color: #555;
+}
+
+.success { color: #1e7e34; font-weight: 500; }
+.failed  { color: #c0392b; font-weight: 500; }
+
+.barTrack {
+  height: 6px;
+  background: #eee;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  background: #1a1a1a;
+  border-radius: 99px;
+  transition: width 0.3s ease;
+}
+
+.barFillError { background: #c0392b; }
+
+.log {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 6px;
+}
+
+.logRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.logSuccess { background: #f0faf2; }
+.logFail    { background: #fdf0ef; }
+
+.logIcon {
+  font-size: 11px;
+  width: 14px;
+  flex-shrink: 0;
+}
+
+.logSuccess .logIcon { color: #1e7e34; }
+.logFail .logIcon    { color: #c0392b; }
+
+.logEmail {
+  flex: 1;
+  color: #333;
+  font-family: monospace;
+}
+
+.logError {
+  color: #c0392b;
+  font-size: 11px;
+  flex-shrink: 0;
+}

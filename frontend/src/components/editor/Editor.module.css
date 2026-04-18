@@ -1,0 +1,185 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    min-height: 360px;
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2px;
+    padding: 8px 10px;
+    border-bottom: 1px solid #eee;
+    background: #fafafa;
+}
+
+.toolbarGroup {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.divider {
+    width: 1px;
+    height: 20px;
+    background: #e0e0e0;
+    margin: 0 4px;
+}
+
+.toolBtn {
+    padding: 4px 8px;
+    font-size: 13px;
+    border: none;
+    border-radius: 4px;
+    background: transparent;
+    color: #444;
+    cursor: pointer;
+    transition: background 0.1s, color 0.1s;
+    min-width: 28px;
+    text-align: center;
+}
+
+.toolBtn:hover {
+    background: #efefef;
+    color: #1a1a1a;
+}
+
+.toolBtn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.toolBtnActive {
+    background: #1a1a1a;
+    color: #fff;
+}
+
+.toolBtnActive:hover {
+    background: #333;
+    color: #fff;
+}
+
+.splitView {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex: 1;
+}
+
+.editorPane {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.content {
+    padding: 20px;
+    min-height: 300px;
+    outline: none;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #1a1a1a;
+}
+
+/* Tiptap placeholder */
+.content .is-editor-empty:first-child::before {
+    content: attr(data-placeholder);
+    color: #aaa;
+    pointer-events: none;
+    float: left;
+    height: 0;
+}
+
+/* Editor content styles */
+.content h1 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.content h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.content h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.content p {
+    margin-bottom: 8px;
+}
+
+.content ul,
+.content ol {
+    padding-left: 20px;
+    margin-bottom: 8px;
+}
+
+.content li {
+    margin-bottom: 2px;
+}
+
+.content a {
+    color: #0070f3;
+    text-decoration: underline;
+}
+
+.content blockquote {
+    border-left: 3px solid #ddd;
+    padding-left: 12px;
+    color: #666;
+    margin: 8px 0;
+}
+
+.content code {
+    background: #f4f4f4;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 13px;
+    font-family: monospace;
+}
+
+.content pre {
+    background: #f4f4f4;
+    padding: 12px;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin-bottom: 8px;
+}
+
+.htmlPane {
+    border-left: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.htmlLabel {
+    font-size: 11px;
+    font-weight: 500;
+    color: #999;
+    padding: 8px 12px;
+    border-bottom: 1px solid #eee;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: #fafafa;
+}
+
+.htmlCode {
+    flex: 1;
+    padding: 12px;
+    font-size: 11px;
+    font-family: monospace;
+    color: #555;
+    overflow: auto;
+    white-space: pre-wrap;
+    word-break: break-all;
+    line-height: 1.6;
+}
